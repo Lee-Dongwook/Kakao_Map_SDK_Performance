@@ -1,4 +1,10 @@
 declare module "@kakao/map" {
-  export function initMap(): void;
-  export function updateMapCenter(lat: number, lng: number): void;
+  interface LatLng {
+    latitude: number;
+    longitude: number;
+  }
+
+  function initMap(): Promise<void>;
+  function createMap(mapContainer: HTMLElement, options: any): any;
+  function getCurrentPosition(): Promise<LatLng>;
 }

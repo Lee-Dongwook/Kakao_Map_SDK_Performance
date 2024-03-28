@@ -1,26 +1,31 @@
-function initMap() {
-  const mapContainer = document.getElementById("map");
-  const mapOption = {
-    center: new kakao.maps.LatLng(37.566535, 126.9779692),
-    level: 3,
-  };
-
-  const map = new kakao.maps.Map(mapContainer, mapOption);
-
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(function (position) {
-      const lat = position.coords.latitude;
-      const lng = position.coords.longitude;
-      const locPosition = new kakao.maps.LatLng(lat, lng);
-      map.setCenter(locPosition);
+const KakaoMap = {
+  initMap: function () {
+    return new Promise((resolve, reject) => {
+      window.kakao.maps.load(() => {
+        resolve();
+      });
     });
-  }
-}
+  },
+  createMap: function (mapContainer, options) {
+    return new window.kakao.maps.Map(mapContainer, options);
+  },
+  getCurrentPosition: function () {
+    return new Promise((resolve, reject) => {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+          (position) => {
+            const { latitude, longitude } = position.coords;
+            resolve({ latitude, longitude });
+          },
+          (error) => {
+            reject(error);
+          }
+        );
+      } else {
+        reject(new Error("Geolocation is not supported."));
+      }
+    });
+  },
+};
 
-function updateMapCenter(lat, lng) {
-  const newPos = new kakao.maps.LatLng(lat, lng);
-  map.setCenter(newPos);
-}
-
-window.onload = initMap;
-window.updateMapCenter = updateMapCenter;
+export default KakaoMap;

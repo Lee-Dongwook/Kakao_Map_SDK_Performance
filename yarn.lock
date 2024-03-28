@@ -561,7 +561,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@kakao/map@npm:*, @kakao/map@workspace:shared/kakao":
+"@kakao/map@workspace:shared/kakao":
   version: 0.0.0-use.local
   resolution: "@kakao/map@workspace:shared/kakao"
   languageName: unknown
@@ -773,6 +773,15 @@ __metadata:
   version: 7.0.15
   resolution: "@types/json-schema@npm:7.0.15"
   checksum: 10c0/a996a745e6c5d60292f36731dd41341339d4eeed8180bb09226e5c8d23759067692b1d88e5d91d72ee83dfc00d3aca8e7bd43ea120516c17922cbcb7c3e252db
+  languageName: node
+  linkType: hard
+
+"@types/node@npm:^20.11.30":
+  version: 20.11.30
+  resolution: "@types/node@npm:20.11.30"
+  dependencies:
+    undici-types: "npm:~5.26.4"
+  checksum: 10c0/867cfaf969c6d8850d8d7304e7ab739898a50ecb1395b61ff2335644f5f48d7a46fbc4a14cee967aed65ec134b61a746edae70d1f32f11321ccf29165e3bc4e6
   languageName: node
   linkType: hard
 
@@ -2051,6 +2060,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"kakao.maps.d.ts@npm:^0.1.39":
+  version: 0.1.39
+  resolution: "kakao.maps.d.ts@npm:0.1.39"
+  checksum: 10c0/2752382aaea86dbeb86021f8aa3397ce9cf9991667f651dd038676aae6db55c74bc5e054d84c64cc759d5424e994771db1c49f441ae6a4ce7ee174847cc8d4ed
+  languageName: node
+  linkType: hard
+
 "kakao@workspace:.":
   version: 0.0.0-use.local
   resolution: "kakao@workspace:."
@@ -2528,7 +2544,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "react-vite@workspace:apps/react-vite"
   dependencies:
-    "@kakao/map": "npm:*"
+    "@types/node": "npm:^20.11.30"
     "@types/react": "npm:^18.2.66"
     "@types/react-dom": "npm:^18.2.22"
     "@typescript-eslint/eslint-plugin": "npm:^7.2.0"
@@ -2537,6 +2553,7 @@ __metadata:
     eslint: "npm:^8.57.0"
     eslint-plugin-react-hooks: "npm:^4.6.0"
     eslint-plugin-react-refresh: "npm:^0.4.6"
+    kakao.maps.d.ts: "npm:^0.1.39"
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
     typescript: "npm:^5.2.2"
@@ -2912,6 +2929,13 @@ __metadata:
     tsc: bin/tsc
     tsserver: bin/tsserver
   checksum: 10c0/6e51f8b7e6ec55b897b9e56b67e864fe8f44e30f4a14357aad5dc0f7432db2f01efc0522df0b6c36d361c51f2dc3dcac5c832efd96a404cfabf884e915d38828
+  languageName: node
+  linkType: hard
+
+"undici-types@npm:~5.26.4":
+  version: 5.26.5
+  resolution: "undici-types@npm:5.26.5"
+  checksum: 10c0/bb673d7876c2d411b6eb6c560e0c571eef4a01c1c19925175d16e3a30c4c428181fb8d7ae802a261f283e4166a0ac435e2f505743aa9e45d893f9a3df017b501
   languageName: node
   linkType: hard
 
