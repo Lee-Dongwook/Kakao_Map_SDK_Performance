@@ -1,0 +1,20 @@
+{
+  "name": "kakao",
+  "version": "1.0.0",
+  "packageManager": "yarn@4.1.1",
+  "workspaces": {
+    "packages": [
+      "apps/*",
+      "shared/*"
+    ]
+  },
+  "repository": "https://github.com/Lee-Dongwook/Kakao_Map_SDK_Performance.git",
+  "author": "Lee-Dongwook <dlehddnr0713@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "yarn workspace react-vite dev"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.3"
+  }
+}
